@@ -76,6 +76,7 @@
 	<img src="image3.png"/>
 </my-carousel>
 					</code></pre>
+					<p>Now we have semantic meaning to elements and we can use native APIs to be able to interact with these with just plain Javascript</p>
 				</section>
 
 				<section>
@@ -89,22 +90,24 @@
 
 				<section>
 					<h2>The Shadow-DOM</h2>
-					<pre><code>
-<!-- Partial implementation of a <fancy-button> -->
-<template id='fancy-button'>
+					<pre><code><!-- Partial implementation of a <profile-card> -->
+<template id='profile-card'>
 	<style>
-		:host {
-			width: 40px;
-			height: 30px;
-			background-color: slategrey;
-			border-radius: 4px;
+		img {
+			border-radius: 50%;
+		}
+		h3 {
+			font-size: 24px;
 		}
 	</style>
-	<button><slot></slot></button>
-</template>
-					</code></pre>
+	<div>
+		<img src="img/profile.png" />
+		<h3>Benjamin Lannon</h3>
+		<p>Hi, I'm Benjamin. I am a web developer.</p>
+	</div>
+</template></code></pre>
 					<p>
-						The styles inside the template tags are shut off from the rest of the document. nothing gets out.
+						The styles inside the template tags are shut off from the rest of the document. nothing gets in or out.
 					</p>
 				</section>
 
@@ -117,7 +120,7 @@
 
 				<section>
 					<h2>Browser Support</h2>
-					<p>Custom Elements v1 and Shadow Dom v1 are in the newest stable Chrome release (54). the original specs are in Chrome, Firefox (with a flag), and Safari.</p>
+					<p>Custom Elements v1 and Shadow Dom v1 are in the newest stable Chrome release (54). the original specs are in Chrome, Firefox (with a flag), and Safari. Luckily, all modern browsers are planning on implementing the v1 specs</p>
 					<p>For backwards compatibility, look into these <a href='http://webcomponents.org/polyfills/'>polyfills</a>.</p>
 				</section>
 
@@ -130,7 +133,7 @@
 				</section>
 
 				<section>
-					<h2>Embrace the platform</h2>
+					<h2>Use the platform</h2>
 					<p>Any Questions?</p>
 				</section>
 
